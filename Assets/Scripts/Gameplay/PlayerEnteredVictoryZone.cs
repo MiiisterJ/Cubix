@@ -1,6 +1,10 @@
 using Platformer.Core;
 using Platformer.Mechanics;
 using Platformer.Model;
+using UnityEngine;
+using UnityEngine.UI;
+
+
 
 namespace Platformer.Gameplay
 {
@@ -19,6 +23,10 @@ namespace Platformer.Gameplay
         {
             model.player.animator.SetTrigger("victory");
             model.player.controlEnabled = false;
+            // To do: Enable Victory Screen here!
+            Canvas VicScreen;
+            VicScreen = GameObject.Find("Victory And Defeat Canvas").GetComponent<Canvas>();
+            VicScreen.enabled = true; 
         }
     }
 }

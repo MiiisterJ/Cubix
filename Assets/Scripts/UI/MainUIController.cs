@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Platformer.UI
 {
@@ -21,9 +22,20 @@ namespace Platformer.UI
             }
         }
 
+        public void RestartLevel()
+        {
+            Scene currentscene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentscene.name);
+        }
+
+        public void ExitGame()
+        {
+            Application.Quit(); 
+        }
         void OnEnable()
         {
             SetActivePanel(0);
+
         }
     }
 }
