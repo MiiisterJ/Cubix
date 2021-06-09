@@ -20,7 +20,11 @@ namespace Platformer.Mechanics
             heart[0] = GameObject.Find("Game Canvas/Heart 1").GetComponent<Image>();
             heart[1] = GameObject.Find("Game Canvas/Heart 2").GetComponent<Image>();
             heart[2] = GameObject.Find("Game Canvas/Heart 3").GetComponent<Image>();
+
+            token = GameObject.Find("Game Canvas/Collectable Text/Yellow Diamond/Text").GetComponent<Text>();
+            //token.text = "0/" + player.collection.MaxTokens;
         }
+
 
         // Update is called once per frame
         void Update()
@@ -34,6 +38,8 @@ namespace Platformer.Mechanics
             if (player.health.currentHP <= 0)
                 heart[0].enabled = false;
             else heart[0].enabled = true;
+
+            token.text = player.collection.Tokens + "/" + player.collection.MaxTokens;
         }
 
     }

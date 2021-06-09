@@ -23,7 +23,7 @@ public class VictoryScreen : MonoBehaviour
         {
             if(SceneName == "Level " + i)
             {
-                SceneManager.LoadScene("Level " + (i + 1));
+                SceneManager.LoadScene(i + 1);
             }
         }
     }
