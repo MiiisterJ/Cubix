@@ -21,9 +21,9 @@ public class TitleScreen : MonoBehaviour
     }
 
 
-    void ExitGame()
+    public void ExitGame()
     {
-       Application.Quit();
+       Application.Quit(); 
     }
     // Update is called once per frame
     void Update()
